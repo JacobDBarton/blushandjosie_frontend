@@ -1,35 +1,23 @@
 import { Link } from "react-router-dom";
+import { Navbar, Container } from "react-bootstrap";
 
-function NavBar(props) {
-  //inline style for the nav tag
-  const navStyle = {
-    display: "flex",
-    justifyContent: "space-around",
-    border: "3px solid black",
-    padding: "8px",
-    width: "90%",
-    margin: "auto",
-  };
+const Nav = (props) => (
+  <Navbar bg="light" variant="light">
+    <Container>
+      <Navbar.Brand as={Link} to="/">
+        <img
+          alt="blush&josie logo"
+          src="https://cdn-icons-png.flaticon.com/512/2093/2093785.png"
+          width="200"
+          height="60"
+          className="d-inline-block align-top"
+        />
+      </Navbar.Brand>
+      <Link to="/cart">
+        <div>Cart Page</div>
+      </Link>
+    </Container>
+  </Navbar>
+);
 
-  return (
-    <header>
-      <h1>Blush and Josie</h1>
-      <nav style={navStyle}>
-        <Link to="/">
-          <div>HOME</div>
-        </Link>
-        <Link to="/Collection">
-          <div>Collections</div>
-        </Link>
-        <Link to="/Show">
-          <div>Show Page</div>
-        </Link>
-        <Link to="/cart">
-          <div>CART</div>
-        </Link>
-      </nav>
-    </header>
-  );
-}
-
-export default NavBar;
+export default Nav;

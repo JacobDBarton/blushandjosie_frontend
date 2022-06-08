@@ -5,15 +5,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function CarouselComponent() {
     return (
         <div className="carousel-wrapper">
-            <Carousel>
+            <Carousel interval={3000}>
                 <div>
-                    <img src="../blush.webp" />
+                    <img src="../images/blush.webp" alt=""/>
                 </div>
                 <div>
-                    <img src="../josie.webp" />
+                    <img src="../images/josie.webp" alt=""/>
                 </div>
                 <div>
-                    <img src="../sam.webp" />
+                    <img src="../images/sam.webp" alt=""/>
                 </div>
             </Carousel>
         </div>

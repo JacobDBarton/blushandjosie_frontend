@@ -1,13 +1,61 @@
-.carousel-img {
-    height: 400px;
-    object-fit: cover;
-  }
+* {
+  font-family: 'Montserrat', serif;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  background-color: antiquewhite;
+}
+
+.Policy {
+  text-align: center;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 100;
+}
+
+.carousel-caption h2 {
+  color: rgb(7, 7, 7);
+}
+
+.carousel img {
+  height: 900px;
+  padding: 100px;
+  margin: -80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav {
+  margin: 10px;
+  padding: 1%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.navBar {
+  color: #f1cbcd;
+  background-color: seashell;
+}
+
+.navBar a {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
 
   .footer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    margin: auto;
-    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  img {
+    height: 300px;
   }
