@@ -29,6 +29,7 @@
   margin: -80px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 800px;
 }
 
 .nav {
@@ -56,6 +57,3 @@
     grid-row-end: 4;
   }
 
-  img {
-    height: 300px;
-  }
