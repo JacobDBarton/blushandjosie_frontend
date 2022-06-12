@@ -1,0 +1,8 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  background-color: antiquewhite;
+}

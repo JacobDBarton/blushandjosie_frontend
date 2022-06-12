@@ -1,0 +1,76 @@
+.policy {
+  text-align: center;
+}
+
+.carousel img {
+  height: 900px;
+  padding: 100px;
+  margin: -80px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 800px;
+}
+
+.blush {
+  width: 180px;
+  height: 180px;
+  padding: 10px;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  font-size: 8px;
+  justify-content: space-around;
+}
+
+  a {
+  font-size: 30px;
+  color: rgb(44, 44, 44);
+}
+
+  a:hover {
+  color: #ffffff;
+}
+
+.footer {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  text-align: center;
+  padding: 20px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin: 10px;
+  padding: 1%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+}
+
+.product {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.product.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.product.featured .card {
+  height: 100%;
+}
+  

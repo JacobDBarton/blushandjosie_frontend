@@ -1,3 +1,4 @@
+import "../styles/App.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import CarouselComponent from "../components/Carousel.component";
@@ -17,12 +18,12 @@ function Home() {
       <h2>Check out our collection of hand-crafted earrings here!</h2>
       <img
         alt="blush&josie logo"
-        src="https://cdn-icons-png.flaticon.com/512/2093/2093785.png"
-        width="200"
-        height="60"
-        className="d-inline-block align-top"
+        src="https://cdn.shopify.com/s/files/1/0415/5047/9512/products/image_6d26c5d0-1708-4b54-9a26-6ab5fbfb5922_1080x.jpg?v=1624917658"
+        width="180"
+        height="180"
+        className="collectionImage"
       />
-      <Link to="/Products">
+      <Link to="/products">
         <div>Collections Page</div>
       </Link>
     </div>
