@@ -60,11 +60,7 @@ function Collection() {
     <div>
       <div>{loading ? <h1>loading...</h1> : loaded()}</div>
       <div>
-        <Link className="policy" to="/productsId">
-          <div>Show Page</div>
-        </Link>
         <div className="policy">
-          <p>Collection's Page</p>
           <h3>POLICIES:</h3>
           <h2>* US Shipping Only</h2>
           <h2>* Refund and Return Policy</h2>
