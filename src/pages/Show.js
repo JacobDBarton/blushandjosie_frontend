@@ -1,35 +1,50 @@
-import {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-
+import { useState, useEffect } from "react";
+import { Link, useOutletContext, useParams } from "react-router-dom";
+import { Button, Container, Image, Row, Col } from "react-bootstrap";
+import { addToCart } from "../utils";
 
 function Show(props) {
-    const [products, setProducts] = useState(null);
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const params = useParams();
+  const { apiUrl, cartState } = useOutletContext();
+  const [, setCart] = cartState;
 
-    useEffect(() => {
-        const getProductsData = async () => {
-            const response = await fetch(props.URL + "products");
-            const data = await response.json();
-            console.log(data);
-            setProducts(data);   
-        };
-        getProductsData();
-    }, [props.URL]);
-
-    const loaded = () => {
-        return products.map((product) => (
-            <div>
-              <Link to={`/product/${product.id}`}>
-                <h3>{product.name}</h3>
-              </Link>
-              <Link to={`/product/${product.id}`}>
-                <img src={product.image} alt='product' width={250} height={250}/>
-              </Link>
-            </div>
-        
-        ));
+  useEffect(() => {
+    const getProductsData = async () => {
+      setLoading(true);
+      const response = await fetch(`${apiUrl}/product/${params.id}`);
+      setProduct(await response.json());
+      setLoading(false);
     };
-    return products ? loaded() : <h1>PLEASE WORK...</h1>;
-};
+    getProductsData();
+  }, [apiUrl, params.id]);
 
+  return loading || !product ? (
+    <h1>Loading...</h1>
+  ) : (
+    <Container>
+      <Row>
+        <Col>
+          <Image src={product.image} alt={product.name} rounded fluid />
+        </Col>
+        <Col>
+          <div class="my-3 p-3">
+            <h2 class="display-6">{product.name}</h2>
+            <p class="lead">${parseInt(product.price, 10)}</p>
+            <Button
+              as={Link}
+              to="/cart"
+              variant="outline-dark"
+              onClick={() => setCart((cart) => addToCart(cart, product))}
+            >
+              Add to Cart
+            </Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
 
 export default Show;

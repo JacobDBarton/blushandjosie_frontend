@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { addToCart } from "../utils";
 
 function Collection() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { apiUrl, cartState } = useOutletContext();
+  const [, setCart] = cartState;
 
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch(
-        "https://blush-and-josie.herokuapp.com/product"
-      );
+      const response = await fetch(`${apiUrl}/product`);
       setProducts(await response.json());
       setLoading(false);
     };
     getProducts();
-  }, []);
+  }, [apiUrl]);
 
   const loaded = () => {
     return (
@@ -26,25 +28,28 @@ function Collection() {
               key={product._id}
               className={`product ${i % 7 === 0 ? "featured" : ""}`}
             >
-              <div className="card text-center">
+              <Link
+                to={`/products/${product._id}`}
+                className="card text-center"
+              >
                 <img
                   src={product.image}
                   className="card-img-top"
                   alt={product.name}
                 />
                 <div className="card-body">
-                  <h5 className="card-title ">
-                    {product.name.substring(0, 12)}
-                  </h5>
+                  <h5 className="card-title ">{product.name}</h5>
                   <p className="card-text lead fw-italic">${product.price}</p>
-                  <Link
-                    to={`/products/${product._id}`}
-                    className="btn btn-outline-dark"
+                  <Button
+                    as={Link}
+                    to="/cart"
+                    variant="outline-dark"
+                    onClick={() => setCart((cart) => addToCart(cart, product))}
                   >
-                    Buy Now
-                  </Link>
+                    Add to Cart
+                  </Button>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}

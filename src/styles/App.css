@@ -24,13 +24,12 @@
   justify-content: space-around;
 }
 
-  a {
-  font-size: 30px;
-  color: rgb(44, 44, 44);
+a {
+  color: rgba(44, 44, 44, 0.7);
 }
 
-  a:hover {
-  color: #ffffff;
+a:hover {
+  color: rgba(44, 44, 44, 1);
 }
 
 .footer {
@@ -58,6 +57,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   grid-auto-flow: dense;
+  margin: 1.5rem 0;
 }
 
 .product {
@@ -70,7 +70,12 @@
   grid-row: span 2;
 }
 
-.product.featured .card {
+.product .card {
   height: 100%;
 }
-  
+
+.align-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

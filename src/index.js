@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
     <Routes>
-      <Route exact path="/" element={<App />} >
+      <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="/products" element={<Collection />} />
         <Route path="/products/:id" element={<Show />} />
