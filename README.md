@@ -29,3 +29,12 @@ Blush & Josie is an e-commerce site I have made where users can buy hand-crafted
 ### **Stretch Goals:**
 * Add user authentication
 * Leave reviews on different earrings in the show page
+
+### **References:**
+* https://getbootstrap.com/docs/5.1/getting-started/introduction/
+* https://react-bootstrap.github.io/layout/stack/
+* https://medium.com/@james.ayres/simple-css-grid-tutorial-for-repeatable-content-on-ecommerce-blog-a5f767d96453
+* https://css-tricks.com/
+* https://reactrouter.com/docs/en/v6/hooks/use-outlet-context
+* https://fontawesome.com/v6/docs/web/use-with/react/add-icons
+* https://github.com/donavon/use-persisted-state
