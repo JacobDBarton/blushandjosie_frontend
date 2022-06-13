@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+### **Project Description**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Blush & Josie is an e-commerce site I have made where users can buy hand-crafted earrings. The user will start on the home page where they will see a welcome post with images. From there they can scroll down to an image that takes them to a collections page where they can see a variety of different earrings with their name and price or hit the collections link on the navbar. On the collections page they can click on a product and it will send them to a show page where they can add that product to their cart or delete it from their cart. 
 
-## Available Scripts
+### **Images:**
+![Screen Shot 2022-06-13 at 1 55 57 AM (2)](https://user-images.githubusercontent.com/100392625/173289355-8cf22747-bb9e-46c8-9fba-b75b963fcf7a.png)
+![Screen Shot 2022-06-13 at 1 56 02 AM (2)](https://user-images.githubusercontent.com/100392625/173289366-a10c1bf1-c792-4de3-8fbb-e70be32abbc9.png)
+![Screen Shot 2022-06-13 at 1 55 33 AM (2)](https://user-images.githubusercontent.com/100392625/173289379-5969a903-0798-4854-ad05-e094bf7a7bf5.png)
+![Screen Shot 2022-06-13 at 1 55 44 AM (2)](https://user-images.githubusercontent.com/100392625/173289387-730ee3b2-e6ab-48bc-8395-ceb5aedcec39.png)
 
-In the project directory, you can run:
 
-### `npm start`
+### **WireFrame:**
+<img width="8944" alt="Untitled (2)" src="https://user-images.githubusercontent.com/100392625/171913075-036b67f5-a14b-44c0-9ac0-d69bab6dc2ee.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **User Stories:**
+* User will be able to go to site and see a home page with a slide show or photo with a quick about me section explaining about the company. Below that will be a collections picture that links to the collections page. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* The navbar will include an option to go to the back to the home page and the shopping cart.
 
-### `npm test`
+* When the user clicks on a pair of earrings in the collections page, they will be redirected to the earring's show page and have the choice to add it to their cart and also delete it from their cart. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Whenever user clicks on the cart in the navbar the user will be redirected to the cart page and shown everything that has been added to their cart.
 
-### `npm run build`
+### **MVP:**
+* Be able to look through different earrings on the collections page
+* Be able to add earrings to cart from the show page
+* Be able to delete earrings from cart
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Stretch Goals:**
+* Add user authentication
+* Leave reviews on different earrings in the show page
