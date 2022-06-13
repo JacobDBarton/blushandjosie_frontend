@@ -61,7 +61,7 @@ function Collection() {
       <div>{loading ? <h1>loading...</h1> : loaded()}</div>
       <div>
         <div className="policy">
-          <h3>POLICIES:</h3>
+          <h3>Policies:</h3>
           <h2>* US Shipping Only</h2>
           <h2>* Refund and Return Policy</h2>
           <p>

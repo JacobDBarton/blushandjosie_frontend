@@ -5,7 +5,7 @@ import CarouselComponent from "../components/Carousel";
 
 function Home() {
   return (
-    <div style={{ marginTop: 10 }}>
+    <div className="homeInfo" style={{ marginTop: 10 }}>
       <CarouselComponent />
       <h1>Blush & Josie</h1>
       <p>

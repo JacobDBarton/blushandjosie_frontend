@@ -9,7 +9,7 @@ export default function CarouselComponent() {
         <Carousel.Item>
           <img
             className="d-block w-100 rounded"
-            src="../images/blush.webp"
+            src="../images/sam.webp"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -27,7 +27,7 @@ export default function CarouselComponent() {
         <Carousel.Item>
           <img
             className="d-block w-100 rounded"
-            src="../images/sam.webp"
+            src="../images/blush.webp"
             alt="Third slide"
           />
         </Carousel.Item>
