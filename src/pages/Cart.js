@@ -12,25 +12,36 @@ function Cart() {
     <>
       <div>Cart Page</div>
       {cart.map((product) => (
-        <div>
-          <h1>{product.name}</h1>
-          <p>Price: ${parseInt(product.price, 10)}</p>
-          <Button
-            variant="outline-danger"
-            onClick={() => removeFromCart(product._id)}
-          >
-            Remove From Cart
-          </Button>
+        <div className="align-center" style={{ marginTop: 20 }}>
+          <img
+            className="d-block rounded"
+            src={product.image}
+            alt={product.name}
+            width={120}
+          />
+          <div style={{ maxWidth: "70%", marginLeft: 30 }}>
+            <h4>{product.name}</h4>
+            <Button
+              variant="outline-danger"
+              size="sm"
+              onClick={() => removeFromCart(product._id)}
+            >
+              Remove
+            </Button>
+          </div>
+          <h4 style={{ flex: 1, textAlign: "right" }}>
+            ${parseInt(product.price, 10)}
+          </h4>
         </div>
       ))}
       {cart.length > 0 ? (
-        <p>
-          Total: $
+        <h3 style={{ textAlign: "right", marginTop: 30 }}>
+          Subtotal: $
           {cart.reduce(
             (sumTotal, product) => sumTotal + parseInt(product.price, 10),
             0
           )}
-        </p>
+        </h3>
       ) : (
         <h1>Cart is empty!</h1>
       )}

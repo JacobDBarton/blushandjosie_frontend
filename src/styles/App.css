@@ -3,12 +3,8 @@
 }
 
 .carousel img {
-  height: 900px;
-  padding: 100px;
-  margin: -80px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 800px;
+  height: 600px;
+  object-fit: cover;
 }
 
 .blush {
